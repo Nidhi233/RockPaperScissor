@@ -9,6 +9,10 @@ public class RockPaperScissors {
         System.out.println("rock/paper/scissor Game");
         System.out.println("r - Rock \np - Paper \ns - Scissor");
 
+        //scoring pattern
+        int myScore = 0;
+        int yourScore = 0;
+
         while (true) {
             String[] options = {"r", "p", "s"};
             String myMove = options[new Random().nextInt(options.length)];
@@ -32,27 +36,39 @@ public class RockPaperScissors {
             else if (yourMove.equals("r")) {
                 if (myMove.equals("p")) {
                     System.out.println("I win!");
+                    myScore++;
+                    System.out.println("Your score - "+yourScore+" | My score - "+myScore);
 
                 } else if (myMove.equals("s")) {
                     System.out.println("You win!");
+                    yourScore++;
+                    System.out.println("Your score - "+yourScore+" | My score - "+myScore);
                 }
             }
 
             else if (yourMove.equals("p")) {
                 if (myMove.equals("r")) {
                     System.out.println("You win!");
+                    yourScore++;
+                    System.out.println("Your score - "+yourScore+" | My score - "+myScore);
 
                 } else if (myMove.equals("s")) {
                     System.out.println("I win!");
+                    myScore++;
+                    System.out.println("Your score - "+yourScore+" | My score - "+myScore);
                 }
             }
 
             else if (yourMove.equals("s")) {
                 if (myMove.equals("p")) {
                     System.out.println("You win!");
+                    yourScore++;
+                    System.out.println("Your score - "+yourScore+" | My score - "+myScore);
 
                 } else if (myMove.equals("r")) {
                     System.out.println("I win!");
+                    myScore++;
+                    System.out.println("Your score - "+yourScore+" | My score - "+myScore);
                 }
             }
 
